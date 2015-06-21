@@ -7,7 +7,7 @@ var InputComponent = function() {
 	  	UP: 38,
 		RIGHT: 39,
 		DOWN: 40
-	},
+	};
 
 	this.keyboard = {
   		_pressed: {},

@@ -20,12 +20,12 @@ RectangleComponent.prototype.intersects = function(entity, other) {
 	if (r1.x < r2.x2 && r1.x2 > r2.x && r1.y < r2.y2 && r1.y2 > r2.y)
 		return true;
 	return false;
-}
+};
 
 var Vector2d = function(x,y) {
 	this.x = x;
 	this.y = y;
-}
+};
 
 RectangleComponent.prototype.IntersectDepthVector = function (r1, r2) {
 
@@ -64,7 +64,7 @@ RectangleComponent.prototype.IntersectDepthVector = function (r1, r2) {
   depthX = distanceX > 0 ? minDistanceX - distanceX : -minDistanceX - distanceX;
   depthY = distanceY > 0 ? minDistanceY - distanceY : -minDistanceY - distanceY;
   return new Vector2d(depthX, depthY);
-}
+};
 
 RectangleComponent.prototype.getSideCollision = function(entity, other)
 {
@@ -97,7 +97,7 @@ RectangleComponent.prototype.getSideCollision = function(entity, other)
 			}
 		}
 	}
-}
+};
 
 
 

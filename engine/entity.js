@@ -17,30 +17,30 @@ Entity.prototype.removeComponentByID = function(componentId) {
 
 Entity.prototype.getComponents = function() {
 	return this.components;
-}
+};
 
 Entity.prototype.getPos = function() {
 	return this.getComponent("POSITION").pos;
-}
+};
 
 Entity.prototype.getSize = function() {
 	return this.getComponent("RECTANGLE").size;
-}
+};
 
 Entity.prototype.getImage = function() {
 	return this.getComponent("SPRITE");
-}
+};
 
 Entity.prototype.intersects = function(other) {
 	return this.getComponent("RECTANGLE").intersects(this, other);
-}
+};
 
 Entity.prototype.getComponent = function(componentId) {
 	return this.components[componentId] || null;
-}
+};
 
 Entity.prototype.update = function() {
 	for (var comp in this.components) {
 		this.components[comp].exec(this);
-	};
-}
+	}
+};

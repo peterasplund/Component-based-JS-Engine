@@ -11,7 +11,7 @@ ContentManager.prototype.loadImages = function(imagesList, callback) {
 	this.length = imagesList.length;
 	for (var i = 0; i < imagesList.length; i++) {
 		this.loadImage(imagesList[i].src, imagesList[i].name, callback);
-	};
+	}
 };
 
 ContentManager.prototype.loadImage = function(src, name, callback) {

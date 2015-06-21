@@ -5,7 +5,7 @@ var Game = function() {
 	cm.loadImages( [{name: "player", src: "engine/assets/img/defaultAnimation.png"},
 					{name: "enemy", src: "engine/assets/img/defaultAnimation2.png"},
 					{name: "bush", src: "engine/assets/img/bush.png"}],
-					function() {
+	function() {
 
 
 		var player = new Player(cm.getImage("player"));

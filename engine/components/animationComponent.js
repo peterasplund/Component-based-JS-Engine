@@ -35,8 +35,9 @@ AnimationComponent.prototype.exec = function(entity) {
 
 	entity.getComponent("SPRITE").rectangle = entity.getSize();
 
-	if (this.isPlaying == false || this.animations[this.currentAnimation] == undefined)
+	if (!this.isPlaying || typeof(this.animations[this.currentAnimation]) === "undefined") {
 		return;
+	}
 
 
 	this.animationDelay++;
