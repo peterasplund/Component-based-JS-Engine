@@ -46,7 +46,7 @@ describe("Entity", function() {
 
     entity.addComponent(compEmpty);
 
-    entity.removeComponentByID("ABSTRACT_COMPONENT");
+    entity.removeComponentByID("ABSTRACT");
 
     //demonstrates use of custom matcher
     expect(Object.keys(entity.components).length).toBe(0);
@@ -60,7 +60,7 @@ describe("Entity", function() {
 
     entity.addComponent(compEmpty);
 
-    var comp = entity.findComponent("ABSTRACT_COMPONENT");
+    var comp = entity.getComponent("ABSTRACT");
 
     expect(comp).not.toBe(null);
   });
@@ -71,7 +71,7 @@ describe("Entity", function() {
     entity.addComponent(new PhysicsComponent());
 
 
-    expect(entity.findComponent("PHYSICS_COMPONENT").vel.x).not.toBe(undefined);
+    expect(entity.getComponent("PHYSICS").vel.x).not.toBe(undefined);
   });
   it("should be able to locate some components", function() {
 
@@ -80,7 +80,7 @@ describe("Entity", function() {
     entity.addComponent(new PositionComponent({x: 10, y : 65}));
     entity.addComponent(new PhysicsComponent({x: 1, y: 0}));
 
-    expect(entity.findComponent("PHYSICS_COMPONENT").vel.x).toBe(1);
+    expect(entity.getComponent("PHYSICS").vel.x).toBe(1);
   });
 
 });

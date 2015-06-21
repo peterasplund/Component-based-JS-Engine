@@ -30,15 +30,11 @@ RenderComponent.prototype.exec = function() {
 	for (var i = 0; i < this.entities.length; i++) {
 		this.drawComp.exec(this.entities[i]);
 
-
-
 		var test = Object.create(this.entities).splice(i + 1,2);
 
 		this.entities[i].update(test);
 
-
-
-	};
+	}
 	
 };
 

@@ -42,7 +42,7 @@ AnimationComponent.prototype.exec = function(entity) {
 
 	this.animationDelay++;
 
-	if (!(this.animationDelay >= this.animationSpeed))
+	if ((this.animationDelay < this.animationSpeed))
 		return;
 	else
 		this.animationDelay = 0;

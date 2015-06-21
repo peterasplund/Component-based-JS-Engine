@@ -2,7 +2,7 @@
 var DrawComponent = function(width, height, antialias) {
 	Component.call(this);
 
-	var antialias = antialias || false;
+	antialias = antialias || false;
 
 	this.width = width || 800;
 	this.height = height || 450; 
@@ -22,8 +22,8 @@ DrawComponent.prototype.ID = "DRAW";
 
 DrawComponent.prototype.drawText = function(pos, text, color) {
 	this.ctx.fillStyle = color || "#333333";
-	pos = pos || { x: 0, y: 0 }
-	this.ctx.fillText(text, pos.x, pos.y)
+	pos = pos || { x: 0, y: 0 };
+	this.ctx.fillText(text, pos.x, pos.y);
 };
 
 
@@ -50,7 +50,7 @@ DrawComponent.prototype.exec = function(entity) {
 
 
 	//DEBUG
-	this.ctx.fillText("id: " + entity.id,pos.x + 18,pos.y - 1)
+	this.ctx.fillText("id: " + entity.id,pos.x + 18,pos.y - 1);
 	this.ctx.strokeStyle="#5eea12";
 	this.ctx.strokeRect(pos.x,pos.y, size.width, size.height);
 };

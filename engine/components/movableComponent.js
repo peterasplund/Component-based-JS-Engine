@@ -15,9 +15,9 @@ MovableComponent.prototype.ID = "MOVABLE";
 MovableComponent.prototype.exec = function(self) {
 
 	//Dependencies
-	if (self.getComponent("INPUT") == null)
+	if (self.getComponent("INPUT") === null)
 		self.addComponent(new InputComponent());
-	if (self.getComponent("PHYSICS") == null)
+	if (self.getComponent("PHYSICS") === null)
 		self.addComponent(new PhysicsComponent());
 
 
