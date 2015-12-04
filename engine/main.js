@@ -2,8 +2,8 @@ var Game = function() {
 
 	var cm = new ContentManager();
 
-	cm.loadImages( [{name: "player", src: "engine/assets/img/defaultAnimation.png"},
-					{name: "enemy", src: "engine/assets/img/defaultAnimation2.png"},
+	cm.loadImages( [{name: "player", src: "engine/assets/img/character_ness_walk.png"},
+					{name: "enemy", src: "engine/assets/img/character_ness_walk.png"},
 					{name: "bush", src: "engine/assets/img/bush.png"}],
 	function() {
 

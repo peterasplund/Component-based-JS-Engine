@@ -3,8 +3,8 @@ var Enemy = function(img, pos) {
 
 	
 
-	var size = { width: 16, height: 16}
-	var scaleSize = { width: 120, height: 120 };
+	var size = { width: 32, height: 50}
+	var scaleSize = { width: 60, height: 60 };
 
 	this.addComponent(new PositionComponent({ x: pos.x, y: pos.y }));
 	this.addComponent(new RectangleComponent(scaleSize));
@@ -15,7 +15,7 @@ var Enemy = function(img, pos) {
 	this.getComponent("PHYSICS").friction = 0.5;
 
 	this.getComponent("ANIMATION").addAnimation("run-down", [0,2]);
-	this.getComponent("ANIMATION").addAnimation("run-up", [6,8]);
+	this.getComponent("ANIMATION").addAnimation("run-up", [29,32]);
 	this.getComponent("ANIMATION").addAnimation("run-left", [3,5]);
 	this.getComponent("ANIMATION").addAnimation("run-right", [9,11]);
 	this.getComponent("ANIMATION").setAnimation("run-down");

@@ -30,6 +30,10 @@ AnimationComponent.prototype.stop = function() {
 	this.isPlaying = false;
 };
 
+AnimationComponent.prototype.resetFrame = function() {
+	this.currentFrame = 0;
+}
+
 
 AnimationComponent.prototype.exec = function(entity) {
 
