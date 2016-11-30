@@ -1,0 +1,32 @@
+{
+  "name": "Component-based-JS-Engine",
+  "version": "1.0.0",
+  "description": "Game engine in js",
+  "main": "webpack.config.js",
+  "directories": {
+    "dev": "webpack",
+    "build": "webpack",
+    "test": "test"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-preset-es2015": "^6.18.0",
+    "tap": "^8.0.1",
+    "webpack": "^1.13.3"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterasplund/Component-based-JS-Engine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterasplund/Component-based-JS-Engine/issues"
+  },
+  "homepage": "https://github.com/peterasplund/Component-based-JS-Engine#readme"
+}
