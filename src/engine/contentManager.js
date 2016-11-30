@@ -1,4 +1,4 @@
-export default class ContentManager extends Component {
+export default class ContentManager {
 	constructor() {
 		this.images = {};
 		this.sounds = {};

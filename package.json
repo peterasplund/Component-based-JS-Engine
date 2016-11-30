@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "Game engine in js",
   "main": "webpack.config.js",
-  "directories": {
-    "dev": "webpack",
-    "build": "webpack",
-    "test": "test"
-  },
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-plugin-transform-class-properties": "^6.19.0",
@@ -16,6 +11,8 @@
     "webpack": "^1.13.3"
   },
   "scripts": {
+    "dev": "webpack",
+    "build": "webpack",
     "test": "tap test/*.js"
   },
   "repository": {

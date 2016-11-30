@@ -8,12 +8,7 @@ var port = (+process.env.PORT + 1) || 3001;
 
 module.exports = {
   devtool: 'inline-source-map',
-  context: path.resolve(__dirname, '..'),
-  entry: {
-    'main': [
-      './src/main.js'
-    ]
-  },
+  entry: './src/main.js',
   output: {
     path: assetsPath,
     filename: '[name]-[hash].js',

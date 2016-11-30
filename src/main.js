@@ -1,3 +1,4 @@
+
 import {
 	DrawComponent,
 	RenderComponent,
@@ -14,7 +15,7 @@ import {
 
 
 const cm = new ContentManager();
-
+/*
 cm.loadImages( [{name: "player", src: "engine/assets/img/character_ness_walk.png"},
 				{name: "enemy", src: "engine/assets/img/character_ness_walk.png"},
 				{name: "bush", src: "engine/assets/img/bush.png"}],
@@ -35,3 +36,4 @@ scene.addEntity(bush);
 const gameLoop = new GameloopComponent(scene);
 gameLoop.startGame();
 
+*/
