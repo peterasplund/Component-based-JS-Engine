@@ -1,9 +1,8 @@
-import Entity from '../entity';
+import Entity from '../engine/entity';
 
 export default class Enemy extends Entity {
 	constructor(img, pos) {
-		super(this);
-
+		super();
 		const size      = { width: 32, height: 50}
 		const scaleSize = { width: 60, height: 60 };
 

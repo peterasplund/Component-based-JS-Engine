@@ -4,7 +4,7 @@ export default class PhysicsComponent extends Component {
 	ID = "PHYSICS";
 
 	constructor(vel, friction, maxspeed) {
-		Component.call(this);
+		super();
 		this.vel = vel || {x:0,y:0};
 
 		this.maxspeed = maxspeed || 10;

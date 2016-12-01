@@ -15,10 +15,12 @@ import {
 
 
 const cm = new ContentManager();
-/*
-cm.loadImages( [{name: "player", src: "engine/assets/img/character_ness_walk.png"},
-				{name: "enemy", src: "engine/assets/img/character_ness_walk.png"},
-				{name: "bush", src: "engine/assets/img/bush.png"}],
+
+cm.loadImages([
+	{ name: "player", src: "engine/assets/img/character_ness_walk.png" },
+	{ name: "enemy",  src: "engine/assets/img/character_ness_walk.png" },
+	{ name: "bush",   src: "engine/assets/img/bush.png" }
+]);
 
 const player = new Player(cm.getImage("player"));
 
@@ -35,5 +37,3 @@ scene.addEntity(bush);
 
 const gameLoop = new GameloopComponent(scene);
 gameLoop.startGame();
-
-*/

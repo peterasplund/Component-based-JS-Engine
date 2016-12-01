@@ -9,6 +9,7 @@ export default class PositionComponent extends Component {
 	ID = "RECTANGLE";
 
 	constructor(size, solid) {
+		super();
 		this.size = size || { width:32, height:32 };
 		this.solid = solid || false;
 	}

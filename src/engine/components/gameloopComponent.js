@@ -4,7 +4,7 @@ export default class AnimationComponent extends Component {
 	ID = "GAMELOOP";
 
 	constructor(renderer) {
-		super(this);
+		super();
 		this.renderer = renderer;
 	}
 

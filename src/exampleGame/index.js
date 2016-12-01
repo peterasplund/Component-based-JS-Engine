@@ -1,3 +1,3 @@
-export bush from './bush';
-export enemy from './enemy';
-export player from './player';
+export * from './bush';
+export * from './enemy';
+export * from './player';

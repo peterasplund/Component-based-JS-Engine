@@ -1,9 +1,8 @@
-import Entity from '../entity';
+import Entity from '../engine/entity';
 
 export default class Bush extends Entity {
 	constructor(img, pos) {
-		super(this);
-
+		super();
 		const size = { width: 16, height: 16}
 		const scaleSize = { width: 120, height: 120 };
 

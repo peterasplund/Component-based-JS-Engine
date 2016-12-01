@@ -4,7 +4,7 @@ export default class InputComponent extends Component {
 	ID = "INPUT";
 
 	constructor() {
-		super(this);
+		super();
 		this.renderer = renderer;
 
 		var self = this;
@@ -32,11 +32,8 @@ export default class InputComponent extends Component {
 	  		}
 		};
 
-
 		window.addEventListener('keyup', function(event) { self.keyboard.onKeyup(event); }, false);
 		window.addEventListener('keydown', function(event) { self.keyboard.onKeydown(event); }, false);
-
-		Component.call(this);
 	}
 
 	exec = function(entity) {}

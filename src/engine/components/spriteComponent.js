@@ -4,6 +4,7 @@ export default class SpriteComponent extends Component {
 	ID = "SPRITE";
 
 	constructor(img, spriteSize) {
+		super();
 		this.img = img;
 		this.frame = 0;
 		this.zindex = 0;

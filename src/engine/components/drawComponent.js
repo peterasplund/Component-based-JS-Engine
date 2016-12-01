@@ -7,8 +7,7 @@ export default class DrawComponent extends Component {
 	ID = "DRAW";
 
 	constructor(width, height, antialias) {
-		Component.call(this);
-
+		super();
 		antialias = antialias || false;
 
 		this.width = width || 800;

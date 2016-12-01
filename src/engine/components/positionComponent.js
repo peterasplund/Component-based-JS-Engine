@@ -4,7 +4,7 @@ export default class PositionComponent extends Component {
 	ID = "POSITION";
 
 	constructor(pos) {
-		Component.call(this);
+		super();
 		this.pos = pos || {x:0,y:0};
 	}
 

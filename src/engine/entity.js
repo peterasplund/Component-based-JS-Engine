@@ -3,6 +3,7 @@
 */
 export default class Entity extends Component {
 	constructor() {
+		super();
 		this.components = {};
 	}
 	

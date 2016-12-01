@@ -4,6 +4,7 @@ export default class AnimationComponent extends Component {
 	ID = "ANIMATION";
 
 	constructor(animationSpeed) {
+		super();
 		this.animations = {};
 		this.animationSpeed = animationSpeed || 10;
 		this.currentFrame = 0;
@@ -19,7 +20,7 @@ export default class AnimationComponent extends Component {
 			this.animations[name] = frames;
 	};
 
-	.getAnimation(name) {
+	getAnimation(name) {
 		return this.animations[name] || null;
 	};
 
@@ -46,7 +47,7 @@ export default class AnimationComponent extends Component {
 			return;
 		}
 
-		this.animationDela y++;
+		this.animationDelay ++;
 
 		if (this.animationDelay < this.animationSpeed) {
 			return;

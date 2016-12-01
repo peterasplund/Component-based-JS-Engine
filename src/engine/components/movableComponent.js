@@ -6,8 +6,8 @@ export default class MovableComponent extends Component {
 	ID = "MOVABLE";
 
 	constructor(speed) {
+		super();
 		this.speed = speed || 5;
-		super(this);
 	}
 
 	exec(self) {

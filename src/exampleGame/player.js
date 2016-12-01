@@ -1,9 +1,9 @@
-import Entity from '../entity';
+import Entity from '../engine/entity';
 
-export default class Bush extends Entity {
+export default class Player extends Entity {
 	constructor(img) {
-		super(this);
-
+		super();
+		
 		const size = { width: 32, height: 50}
 		const scaleSize = { width: 60, height: 60 };
 		const self = this;
@@ -25,13 +25,13 @@ export default class Bush extends Entity {
 
 		this.getComponent("ANIMATION").setAnimation("run-down");
 
-		setTimeout(function(){
+		setTimeout(() => {
 			self.getComponent("ANIMATION").setAnimation("run-right");
-		},1500)
+		}, 1500);
 	}
 
 	update(entities) {
-		super(this);
+		parent.update(this);
 
 		if (this.getComponent("PHYSICS").vel.x < 0.1 && this.getComponent("PHYSICS").vel.x > -0.1 &&
 			this.getComponent("PHYSICS").vel.y < 0.1 && this.getComponent("PHYSICS").vel.y > -0.1) {

@@ -4,7 +4,7 @@ export default class RenderComponent extends Component {
 	ID = "RENDER";
 
 	constructor(drawComp) {
-		super(this);
+		super();
 		this.drawComp = drawComp;
 		this.entities = [];
 	}
