@@ -1,6 +1,6 @@
 import Component from '../Component';
 
-export default class AnimationComponent extends Component {
+export default class GameloopComponent extends Component {
 	ID = "GAMELOOP";
 
 	constructor(renderer) {

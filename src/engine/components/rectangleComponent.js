@@ -5,7 +5,7 @@ const Vector2d = function(x,y) {
 	this.y = y;
 };
 
-export default class PositionComponent extends Component {
+export default class extends Component {
 	ID = "RECTANGLE";
 
 	constructor(size, solid) {

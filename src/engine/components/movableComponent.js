@@ -2,7 +2,7 @@
 
 import Component from '../Component';
 
-export default class MovableComponent extends Component {
+export default class extends Component {
 	ID = "MOVABLE";
 
 	constructor(speed) {

@@ -1,6 +1,6 @@
 import Entity from '../engine/entity';
 
-export default class Player extends Entity {
+export default class extends Entity {
 	constructor(img) {
 		super();
 		

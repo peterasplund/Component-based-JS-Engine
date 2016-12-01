@@ -1,6 +1,6 @@
 import Component from '../Component';
 
-export default class RenderComponent extends Component {
+export default class extends Component {
 	ID = "RENDER";
 
 	constructor(drawComp) {
