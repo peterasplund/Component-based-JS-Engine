@@ -1,11 +1,11 @@
-import Component from '../Component';
+import Component from '../component';
 
 const Vector2d = function(x,y) {
 	this.x = x;
 	this.y = y;
 };
 
-export default class PositionComponent extends Component {
+export default class extends Component {
 	ID = "RECTANGLE";
 
 	constructor(size, solid) {

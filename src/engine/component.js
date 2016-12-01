@@ -1,4 +1,4 @@
-export default class SpriteComponent extends Component {
+export default class Component {
 	ID = "ABSTRACT";
 	exec() {}
 }

@@ -1,8 +1,8 @@
 //This will need an input component
 
-import Component from '../Component';
+import Component from '../component';
 
-export default class MovableComponent extends Component {
+export default class extends Component {
 	ID = "MOVABLE";
 
 	constructor(speed) {

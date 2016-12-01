@@ -1,6 +1,6 @@
-import Component from '../Component';
+import Component from '../component';
 
-export default class PhysicsComponent extends Component {
+export default class extends Component {
 	ID = "PHYSICS";
 
 	constructor(vel, friction, maxspeed) {

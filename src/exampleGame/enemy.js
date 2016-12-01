@@ -1,5 +1,13 @@
 import Entity from '../engine/entity';
 
+import {
+  RectangleComponent,
+  AnimationComponent,
+  SpriteComponent,
+  PhysicsComponent,
+  PositionComponent
+} from '../../src/engine/components/';
+
 export default class Enemy extends Entity {
 	constructor(img, pos) {
 		super();

@@ -1,75 +1,78 @@
-const tap = require('tap');
+var test = require('tape');
 
-describe("Entity", function() {
-  it("should be able to creeate a new entity", function() {
-    const entity = new Entity();
-    expect(entity).not.toBe(undefined);
-  });
+import Component from '../src/engine/component';
+import Entity from '../src/engine/entity';
+import {
+  PhysicsComponent,
+  PositionComponent
+} from '../src/engine/components/';
 
-  it("should be able to add a component to an entity", function() {
-    
-    const entity = new Entity();
-    const compEmpty = new Component();
-
-    expect(Object.keys(entity.components).length).toBe(0);
-
-    entity.addComponent(compEmpty);
-    
-    //demonstrates use of custom matcher
-    expect(Object.keys(entity.components).length).toBe(1);
-  });
-
-  it("should be able to remove a component from an entity", function() {
-
-    const entity = new Entity();
-    const compEmpty = new Component();
-
-    entity.addComponent(compEmpty);
-    entity.removeComponent(compEmpty);
-
-    //demonstrates use of custom matcher
-    expect(Object.keys(entity.components).length).toBe(0);
-  });
-
-  it("should be able to remove a component from an entity by ID", function() {
-
-    const entity = new Entity();
-    const compEmpty = new Component();
-
-    entity.addComponent(compEmpty);
-    entity.removeComponentByID("ABSTRACT");
-
-    //demonstrates use of custom matcher
-    expect(Object.keys(entity.components).length).toBe(0);
-  });
-
-  it("should be able to get a component by ID", function() {
-
-    const entity = new Entity();
-    const compEmpty = new Component();
-
-    entity.addComponent(compEmpty);
-    const comp = entity.getComponent("ABSTRACT");
-
-    expect(comp).not.toBe(null);
-  });
-  it("should be able to use components properties", function() {
-
-    const entity = new Entity();
-
-    entity.addComponent(new PhysicsComponent());
-
-    expect(entity.getComponent("PHYSICS").vel.x).not.toBe(undefined);
-  });
-  it("should be able to locate some components", function() {
-
-    const entity = new Entity();
-
-    entity.addComponent(new PositionComponent({x: 10, y : 65}));
-    entity.addComponent(new PhysicsComponent({x: 1, y: 0}));
-
-    expect(entity.getComponent("PHYSICS").vel.x).toBe(1);
-  });
-
+test("should be able to creeate a new entity", (t) => {
+  const entity = new Entity();
+  t.notEqual(entity, undefined);
+  t.end();
 });
 
+test("should be able to add a component to an entity", (t) => {
+  const entity = new Entity();
+  const compEmpty = new Component();
+
+  t.equal(Object.keys(entity.components).length, 0);
+
+  entity.addComponent(compEmpty);
+
+  t.equal(Object.keys(entity.components).length, 1);
+  t.end();
+});
+
+test("should be able to remove a component from an entity", (t) => {
+  const entity = new Entity();
+  const compEmpty = new Component();
+
+  entity.addComponent(compEmpty);
+  entity.removeComponent(compEmpty);
+
+  t.equal(Object.keys(entity.components).length, 0);
+  t.end();
+});
+
+test("should be able to remove a component from an entity by ID", (t) => {
+  const entity = new Entity();
+  const compEmpty = new Component();
+
+  entity.addComponent(compEmpty);
+  entity.removeComponentByID("ABSTRACT");
+
+  t.equal(Object.keys(entity.components).length, 0);
+  t.end();
+});
+
+test("should be able to get a component by ID", (t) => {
+  const entity = new Entity();
+  const compEmpty = new Component();
+
+  entity.addComponent(compEmpty);
+  const comp = entity.getComponent("ABSTRACT");
+
+  t.notEqual(comp, null);
+  t.end();
+});
+
+test("should be able to use components properties", (t) => {
+  const entity = new Entity();
+
+  entity.addComponent(new PhysicsComponent());
+
+  t.notEqual(entity.getComponent("PHYSICS").vel.x, undefined);
+  t.end();
+});
+
+test("should be able to locate some components", (t) => {
+  const entity = new Entity();
+
+  entity.addComponent(new PositionComponent({x: 10, y : 65}));
+  entity.addComponent(new PhysicsComponent({x: 1, y: 0}));
+
+  t.equal(entity.getComponent("PHYSICS").vel.x, 1);
+  t.end();
+});

@@ -1,4 +1,4 @@
-import Component from '../Component';
+import Component from '../component';
 
 export default class SpriteComponent extends Component {
 	ID = "SPRITE";
@@ -8,7 +8,7 @@ export default class SpriteComponent extends Component {
 		this.img = img;
 		this.frame = 0;
 		this.zindex = 0;
-		let rects = [];
+		this.rects = [];
 
 		//Add rectangles
 		const spriteWidth = img.width / spriteSize.width || img.width;
@@ -16,13 +16,17 @@ export default class SpriteComponent extends Component {
 
 		for (let y = 0; y < spriteHeight; y++) {
 			for (let x = 0; x < spriteWidth; x++) {
-				rects.push({ x: x * spriteSize.width, y: y * spriteSize.height, width: spriteSize.width, height: spriteSize.height });
+				this.rects.push({ x: x * spriteSize.width, y: y * spriteSize.height, width: spriteSize.width, height: spriteSize.height });
 			}
 		}
 	}
 
 	exec() {
 		
+	}
+
+	getRectangles() {
+		return this.rects;
 	}
 
 	getPos() {

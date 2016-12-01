@@ -1,5 +1,11 @@
 import Entity from '../engine/entity';
 
+import {
+  RectangleComponent,
+  SpriteComponent,
+  PositionComponent
+} from '../../src/engine/components/';
+
 export default class Bush extends Entity {
 	constructor(img, pos) {
 		super();

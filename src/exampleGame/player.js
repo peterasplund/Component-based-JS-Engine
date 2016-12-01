@@ -1,5 +1,14 @@
 import Entity from '../engine/entity';
 
+import {
+  RectangleComponent,
+  MovableComponent,
+  AnimationComponent,
+  SpriteComponent,
+  PhysicsComponent,
+  PositionComponent
+} from '../../src/engine/components/';
+
 export default class Player extends Entity {
 	constructor(img) {
 		super();
