@@ -1,3 +1,3 @@
-export Bush from './bush';
-export Enemy from './enemy';
-export Player from './player';
+export { default as Bush } from './bush';
+export { default as Enemy } from './enemy';
+export { default as Player } from './player';

@@ -1,5 +1,6 @@
-var test = require('tape');
 /*
+var test = require('tape');
+
 import ObjectFactory from '../engine/objectFactory';
 
 test("should be able to create a new image", (t) => {

@@ -1,4 +1,4 @@
-import Component from '../Component';
+import Component from '../component';
 
 /*
 * This component handels the canvas and context. It's also responsible for painting the sprites to the canvas
@@ -30,8 +30,8 @@ export default class DrawComponent extends Component {
 
 	exec = function(entity) {
 		var sprite = entity.getComponent("SPRITE");
-		var framePos = sprite.rectangles()[sprite.frame];
-		var frameSize = sprite.rectangles()[sprite.frame];
+		var framePos = sprite.getRectangles()[sprite.frame];
+		var frameSize = sprite.getRectangles()[sprite.frame];
 		var pos = entity.getPos();
 		var size = entity.getSize();
 

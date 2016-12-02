@@ -1,6 +1,11 @@
 var test = require('tape');
 
+import Component from '../src/engine/component';
 import Entity from '../src/engine/entity';
+import {
+  PhysicsComponent,
+  PositionComponent
+} from '../src/engine/components/';
 
 test("should be able to creeate a new entity", (t) => {
   const entity = new Entity();
@@ -12,7 +17,7 @@ test("should be able to add a component to an entity", (t) => {
   const entity = new Entity();
   const compEmpty = new Component();
 
-  expect(Object.keys(entity.components).length).toBe(0);
+  t.equal(Object.keys(entity.components).length, 0);
 
   entity.addComponent(compEmpty);
 
@@ -27,7 +32,7 @@ test("should be able to remove a component from an entity", (t) => {
   entity.addComponent(compEmpty);
   entity.removeComponent(compEmpty);
 
-  expect(Object.keys(entity.components).length).toBe(0);
+  t.equal(Object.keys(entity.components).length, 0);
   t.end();
 });
 

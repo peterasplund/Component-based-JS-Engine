@@ -1,4 +1,4 @@
-import Component from '../Component';
+import Component from '../component';
 
 const Vector2d = function(x,y) {
 	this.x = x;

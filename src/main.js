@@ -3,7 +3,7 @@ import {
 	DrawComponent,
 	RenderComponent,
 	GameloopComponent
-} from './engine/components';
+} from './engine/components/';
 
 import ContentManager from './engine/contentManager';
 
@@ -11,7 +11,7 @@ import {
 	Player,
 	Bush,
 	Enemy
-} from 'exampleGame';
+} from './exampleGame';
 
 
 const cm = new ContentManager();

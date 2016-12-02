@@ -1,3 +1,4 @@
+/*
 var test = require('tape');
 
 import ObjectFactory from '../src/engine/objectFactory';
@@ -13,3 +14,5 @@ test("should be able to creeate a stdObject (Standard object with position, phys
 	t.equal(obj.getComponent("PHYSICS").vel.x, 1);
 	t.end();
 });
+
+*/

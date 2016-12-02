@@ -1,4 +1,4 @@
-import Component from '../Component';
+import Component from '../component';
 
 export default class AnimationComponent extends Component {
 	ID = "ANIMATION";
@@ -12,7 +12,7 @@ export default class AnimationComponent extends Component {
 		this.animationDelay = 0;
 		this.currentAnimation = '';
 		this._queueStop = false;
-		animationDelay = 0;
+		this.animationDelay = 0;
 	}
 
 	addAnimation(name, frames) {

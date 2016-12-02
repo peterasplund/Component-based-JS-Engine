@@ -1,6 +1,12 @@
 import Entity from '../engine/entity';
 
-export default class extends Entity {
+import {
+  RectangleComponent,
+  SpriteComponent,
+  PositionComponent
+} from '../../src/engine/components/';
+
+export default class Bush extends Entity {
 	constructor(img, pos) {
 		super();
 		const size = { width: 16, height: 16}
